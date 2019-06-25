@@ -1,4 +1,4 @@
-
+@import url("module.css");
 
 *{
 	font-family:  'Josefin Slab', serif ,微軟正黑體;
@@ -14,11 +14,22 @@ body{
 
 .header1{
 	color:#2d3436;
+	margin-bottom: 0px;
+}
+.header-divider{
+	margin:0 auto;
+	height: 30px;
+	width: 210px;
+	background-image:url(../asset/FloralDivider.png); 
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transform: rotateX(180deg);
 }
 
 .title-container{
 	text-align: center;
-	padding: 50px;
+	padding: 10px;
 }
 .flex-box{
 	display:flex;
@@ -27,65 +38,30 @@ body{
 }
 .flex-item{
 	flex:1  45%;
-	/*display:inline-block;*/
-	height:100px;
-	position:relative;
-}
-.search-box{
-	position: absolute;
-	top:50%;
-	left:50%;
-	transform: translate(-50%, -50%);
-	height: 40px;
-	padding:10px;
-	border-radius: 40px;
-	background: #2d3436;
-	/*transform: translateX(-50%);*/
-}
+	height:150px;
 
-
-.search-box:hover > .search-txt{
-	width: 70%;
-	padding: 0 6px;
-
-}
-.search-box:hover > .search-btn{
-	color: #2d3436;
-	background:#ffeaa7;
-}
-
-.search-btn{
-	width:40px;
-	height:40px;
-	border-radius: 50%;
-	color:#fdcb6e;
-	background: #2d3436;
-	float:right;
 	display:flex;
-	justify-content: center;
-	align-items: center;
-	transition: 0.4s;
+	flex-direction: column;
+	justify-content: center;/*水平置中*/
+	align-items: center;/*垂直置中*/
 }
 
-.search-txt{
-	padding:0;
-	border:none;
-	background :none;
-	outline:none;
-	color: white;
-	font-size:16px;
-	float:left;
-	line-height: 40px;
-	transition: 0.4s;
-	width: 0px;
+.flex-item:hover .comment{
+	color:#91b8c9;
+}
+.comment{
+	margin-top: 10px;
+	font-size: 1.5em;
+	font-style: italic;
+	color:#adb3b5;
+}
+.comment::before {
+	content:"#";
+	margin-right: 5px;
 }
 
 .pop-text{
-	position: absolute;
-	left:50%;
-	top:50%;
-	transform: translate(-50%,-50%);
-
+	position:relative;
 }
 .pop-hide{
 	display:none;
@@ -99,14 +75,14 @@ body{
 	padding: 5px 10px;
 	border:solid 1px #fdcb6e;
 	border-radius: 5px ;
+	font-family: fantasy, 微軟正黑體;
 }
-.pop-hide::before {/*三角形*/
+.pop-hide::after {/*三角形*/
 	content:"";
 	width:10px;
 	height:10px;
-	/*background-color:#2d3436;*/
 	position:absolute;
-	left:50px;
+	left:50%;
 	top:-10px;
 	transform: translateX(-50%);
 	border-bottom: solid 10px #2d3436;
@@ -117,4 +93,11 @@ body{
 .pop-text:hover>.pop-hide{
 	display :block;
 	
+}
+
+.price::after{
+	content:"$";
+	color:#8d9396;
+	margin-left:3px;
+	font-size: .7em;
 }
