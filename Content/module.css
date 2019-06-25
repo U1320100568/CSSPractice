@@ -77,6 +77,33 @@ th:nth-child(1),td:nth-child(1){
 	background-color: #91b8c9;
 }
 
+/*button*/
+button{
+	min-height: 20px;
+	min-width: 40px;
+	background-color: #2d3436;
+	background: linear-gradient(#2d3436, #2d3436) padding-box, 
+                linear-gradient(160deg, #566569,  #202020 ) border-box;/*gradient border*/
+    box-shadow: .5px .5px 2px #2d3436;
+	color:#fdcb6e;
+	font-size: 1em;
+	font-family: fantasy;
+	border: solid 2px transparent;
+	border-radius: 8px;
+	margin:0 5px;
+}
+button:focus{
+	outline: 0;
+}
+button:hover{
+	background: linear-gradient(#3d4548,#3d4548) padding-box, 
+                linear-gradient(160deg,  #566569,  #202020 ) border-box;
+}
+button:active{
+	background: linear-gradient(#262d2f,#262d2f) padding-box, 
+                linear-gradient(160deg,  #566569,  #202020 ) border-box;
+    box-shadow: 0px 0px 0px #fff;
+}
 /*search bar*/
 .search-box{
 	
