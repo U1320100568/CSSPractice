@@ -174,4 +174,76 @@ footer a:visited{
 
 	}
 }
+
+.slider{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow: hidden;
+
 }
+.slider .filter{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background-color:#00000055;
+}
+.slide{
+	background-position: center;
+	background-size: cover;
+	width:100%;
+	height:100%;
+	position:absolute;
+	overflow: hidden;
+
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	
+	animation: slide 12s infinite;
+}
+.slide p {
+	color:#fdcb6e;
+	font-size:5em;
+}
+.slide:nth-child(1){
+	left: 0%;
+	background-image: url("../asset/slide_1.jpg");
+	animation-delay: 8s;
+}
+.slide:nth-child(2){
+	background-image: url("../asset/slide_2.jpg");
+	animation-delay: 5s;
+}
+
+.slide:nth-child(3){
+	background-image: url("../asset/slide_3.jpg");
+	animation-delay: 2s;
+}
+
+.slide:nth-child(4){
+	background-image: url("../asset/slide_4.jpg");
+	animation-delay: -1s	;
+}
+@keyframes slide {
+	0%{
+		left: 100%; width: 100%;
+	}
+	5%{
+		left:0%;
+	}
+	25%{
+		left:0%;
+	}
+	30%{
+		left: -100%; width: 100%;
+	}
+	30.0001%{
+		left: -100%; width: 0%;
+	}
+	100%{
+		left:100%; width:0%;
+
+	}
+}
+

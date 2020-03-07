@@ -1,0 +1,40 @@
+.outer-scroll{
+	height:100vw;
+
+	/*transform: rotate(-90deg);*/
+	transform-origin: top left ;
+	/*overflow: hidden;*/
+
+}
+.scroll{
+	font-size: 0;
+	white-space: nowrap;
+	/*transform: rotate(-90deg);
+	transform-origin: top left ;*/
+}
+.slide{
+	color:white;
+	width:300px;
+	height:100vh;
+	font-size:7rem;
+	font-family:  'Barriecito', cursive;
+	display:inline-flex;
+	justify-content: center;
+	align-items:center;
+}
+.slide.one{
+	background: #821D13;
+}
+.slide.two{
+	background: #733937;
+}
+
+.slide.three{
+	background: #8E8482;
+}
+.slide.four{
+	background: #3B444D;
+}
+.slide.five{
+	background: #23232D;
+}
